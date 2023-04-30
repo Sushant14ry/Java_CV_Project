@@ -1,0 +1,17 @@
+package com.h;
+
+public class hello {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		int a = 1;
+		int b = 2;
+		
+		int a1 = b;
+		int b2 = a1;
+		
+		System.out.println("A swap b :"+a1);
+		System.out.println("B value swap a"+b2);
+	}
+}

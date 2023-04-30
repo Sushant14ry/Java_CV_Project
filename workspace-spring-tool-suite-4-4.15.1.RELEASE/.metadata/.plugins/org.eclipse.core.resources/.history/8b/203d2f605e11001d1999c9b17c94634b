@@ -1,0 +1,29 @@
+package com.cwd.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "Join_Interns")
+@Data
+public class InternShip {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int intern_id;
+	private String intern_joindate;
+	private String intern_finishdate;
+	private String intern_country;
+	private String intern_department;
+	
+	@ManyToOne
+	@JoinColumn(name = "studen_id")
+	private Students student;
+}

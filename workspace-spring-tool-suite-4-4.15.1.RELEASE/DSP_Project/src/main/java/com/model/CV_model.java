@@ -1,0 +1,39 @@
+package com.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "CV_Table")
+@Data
+public class CV_model {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int cv_id;
+	private String cfnam;
+	private String clname;
+	private String cphoto;
+	private String cgender;
+	private String cemail;
+	private String cphone;
+	private String caddress;
+	private String ccountry;
+	private String cqualification;
+	private String cbasicqualification;
+	
+	@Column(length = 1000)
+	private String cedubackground;
+	@Column(length = 1000)
+	private String cskills;
+	@Column(length = 1000)
+	private String cintrest;
+	@Column(length = 1000)
+	private String cexp;
+}

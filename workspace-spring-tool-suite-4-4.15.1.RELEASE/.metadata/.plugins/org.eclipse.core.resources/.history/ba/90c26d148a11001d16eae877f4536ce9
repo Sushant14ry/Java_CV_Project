@@ -1,0 +1,11 @@
+package com.prog;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+
+@WebServlet("/servlet1")
+public class First_Servlet extends HttpServlet {
+
+	
+}
